@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">MyTestProj</string>
+    <string name="app_name">Authorization</string>
+
+    <string name="user_name">User Name:</string>
+    <string name="password">Password:</string>
 </resources>
