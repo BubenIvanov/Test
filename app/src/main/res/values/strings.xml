@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Authorization</string>
 
-    <string name="user_name">User Name:</string>
-    <string name="password">Password:</string>
+    <string name="password">Password</string>
+    <string name="Sing_in">Sing in</string>
+
+    <string name="sing_up">Sing Up</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="user_name">User Name</string>
+
+
+    <string name="capture_image">Capture Image</string>
+    <string name="backtolog">Back to Login</string>>
 </resources>

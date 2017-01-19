@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -11,71 +12,68 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.test.bubenivanov.mytestproj.MainActivity"
-    android:weightSum="1">
+    android:background="@color/colorPrimary"
+    >
 
     <ImageView
         android:layout_width="match_parent"
         app:srcCompat="@mipmap/abc"
         android:id="@+id/imageView"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:contentDescription="@string/app_name" />
 
-    <LinearLayout
-        android:orientation="vertical"
+    <EditText
+        android:background="#ffffff"
+        android:textAlignment="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textPersonName"
+               android:ems="10"
+               android:id="@+id/user_name"
+        android:hint="User Name"
+        android:layout_marginTop="80dp"
+        android:textSize="25dp"
+         />
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        >
- <EditText
-     android:background="#9fbc43"
-     android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/editText"
-     android:text="@string/user_name"
-      />
-
-        <EditText
-            android:layout_marginTop="5dp"
-            android:background="#9fbc43"
-            android:textAlignment="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:ems="10"
-                    android:id="@+id/editText2"
-            android:text="@string/password"
-             />
-
-    </LinearLayout>
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/pass"
+        android:textSize="25dp"
+        android:hint="@string/password"
+         />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
 
         >
 
 
         <Button
             android:background="?android:attr/selectableItemBackground"
-            android:text="Sing In"
+            android:text="@string/Sing_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Sing_in"
-
+            android:textColor="#FFFFFF"
             android:layout_weight="1" />
 
         <Button
             android:background="?android:attr/selectableItemBackground"
-            android:text="SIng Up"
+            android:text="@string/sing_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Sing_up"
             android:layout_weight="1"
+            android:textColor="#FFFFFF"
             />
 
     </LinearLayout>
