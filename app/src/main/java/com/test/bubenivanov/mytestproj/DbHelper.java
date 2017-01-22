@@ -48,6 +48,7 @@ db.execSQL("DROP TABLE IF EXISTS "+User_Table);
         values.put(COLUMN_name,name);
         values.put(COLUMN_pass,password);
         long id=db.insert(User_Table,null,values);
+        db.close();
         Log.d(TAG,"user inserted"+id);
 
 
@@ -55,8 +56,7 @@ db.execSQL("DROP TABLE IF EXISTS "+User_Table);
     public boolean getUser(String pass,String name){
         //HashMap<String, String> user = new HashMap<String, String>();
         String selectQuery = "select * from  " + User_Table + " where " +
-                " and " + COLUMN_pass + " = " + "'"+pass+"'"
-                + " and " + COLUMN_name + " = " + "'"+name+"'";
+                COLUMN_pass + " = " + "'"+pass+"'" + " and " + COLUMN_name + " = " + "'"+name+"'";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
