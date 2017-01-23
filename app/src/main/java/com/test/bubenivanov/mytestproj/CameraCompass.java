@@ -46,7 +46,6 @@ public class CameraCompass extends Activity implements SurfaceHolder.Callback,Se
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_compass);
 
-        logOut=(Button) findViewById(R.id.LogOut);
 
         getWindow().setFormat(PixelFormat.UNKNOWN);
 
@@ -59,6 +58,7 @@ public class CameraCompass extends Activity implements SurfaceHolder.Callback,Se
         View view = inflater.inflate(R.layout.compasslayout, null);
         LayoutParams layoutParamsControl= new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
         this.addContentView(view, layoutParamsControl);
+        logOut=(Button) findViewById(R.id.LogOut);
 
         image = (ImageView) findViewById(R.id.compassView);
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -67,12 +67,12 @@ public class CameraCompass extends Activity implements SurfaceHolder.Callback,Se
         if(!session.loggedin())
         {logout();}
 
-        /*logOut.setOnClickListener(new View.OnClickListener() {
+        logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logout();
             }
-        });*/
+        });
 
 
     }
@@ -150,10 +150,10 @@ public class CameraCompass extends Activity implements SurfaceHolder.Callback,Se
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
-        camera.stopPreview();
-        camera.release();
-        camera = null;
-        cameraView = false;
+        //camera.stopPreview(); camera null???
+        //camera.release();
+        //camera = null;
+        //cameraView = false;
     }
     void setPreviewSize(boolean fullScreen) {
 
