@@ -12,5 +12,6 @@
 
     <string name="capture_image">Capture Image</string>
     <string name="backtolog">Back to Login</string>
-    <string name="log_out">Log out</string>>
+    <string name="log_out">Log out</string>
+    <string name="user_name1">User Name</string>>
 </resources>
